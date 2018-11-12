@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Minesweeper v1.0</title>
+    <style type='text/css'>
+    	body{
+			margin: 0 auto;
+			color: #333;
+			background-color: #f9eedd;
+			font-size: 14px;
+			font-family: Arial, sans-serif;
+			line-height: 1.5em;
+			width: 600px;
+		}
+		h3{
+			border-bottom: 1px solid #262696;
+			color: #262696;
+			width: 160px;
+		}
+		a{
+			color: #bd0707;
+		}
+		.left-side{
+			float: left;			
+			margin: 15px 20px 0 0;
+			width: 200px;
+		}
+		.right-side{
+			border-left: 1px solid #CCC;
+			padding-left: 20px;
+			float: left;
+			width: 340px;
+		}
+		.game-board{
+			margin: 0 auto;
+			width: 145px;
+		}
+		#remaining-mines{
+			color:#bd0707;
+			font-weight: bold;
+		}
+		#game-result{		
+			font-size: 18px;
+			height: 20px;
+			font-weight: bold;
+			width: 144px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		.game-over{
+			color: red;
+		}
+		.game-win{
+			color:green;
+		}
+    </style>   
+</head>
+<body>
+	<h2>&#x1F4A3; Mine<span style="color:#bd0707">sweeper</span> v1.0</h2>
+	<div class="left-side">
+		<button onclick="location.reload();"> New Game </button>
+		<button onclick="finishGame(-1,-1);"> Resolve Game </button>
+		
+		<div class="game-board">
+			<p><span id="remaining-mines"></span> remaining mines</p>
+			<div id="game-result"></div>
+			<table id='game'></table>
+		</div>
+	</div>
+	<div class="right-side">
+		<h3>About this version</h3>
+		<ul>
+			<li><b>Author :</b> <a href="https://oussamabenkhiroun.com/" title="Oussama Ben Khiroun" target="_blank"><b>Oussama Ben Khiroun</b></a></li>
+			<li><b>Language :</b> JavaScript using <a href="https://github.com/danielborowski/jsboard" title="jsboard on GitHub" target="_blank">jsboard</a> library (credits to <a href="https://github.com/danielborowski" title="danielborowski on GitHub" target="_blank">danielborowski</a>)</li>
+			<li><b>Algorithm :</b> Use of recursive grid exploration in case of zero neighbour mines
+			<li><b>Design :</b> Microsoft (Windows XP) using sprites</li>
+			<li><b>Source Code :</b> <a href="https://github.com/oussbenk/minesweeper" title="GitHub Repo" target="_blank">GitHub</a></li>
+			<li><b>License :</b> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-NonCommercial 4.0 International License</a>		
+			&nbsp;<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a></li>
+			</ul>
+		<h3>About Minesweeper</h3>
+		<p><a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)" title="Minesweeper on Wikipedia" target="_blank">Minesweeper</a> is a single-player puzzle video game. 
+		The objective of the game is to clear a rectangular board containing hidden "mines" or bombs without detonating any of them, with help from clues about the number of neighboring mines in each field <a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)" title="Minesweeper on Wikipedia" target="_blank">[Wikipedia]</a>.
+		</p>
+	</div>
+	
+	<script src="jsboard.min.js"></script>
+	<script src="examples/minesweeper.js"></script>
+</body>
+</html>
