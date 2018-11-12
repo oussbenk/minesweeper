@@ -5,6 +5,7 @@
 - **Algorithm :** Use of recursive grid exploration in case of zero neighbour mines
 - **Design :** Microsoft (Windows XP) using sprites
 - **Source Code :** [https://github.com/oussbenk/minesweeper](https://github.com/oussbenk/minesweeper)
+- **Game Demo :** [https://oussbenk.github.io/minesweeper/](https://oussbenk.github.io/minesweeper/)
 
 > ![screenshot](screenshot.png)
 
